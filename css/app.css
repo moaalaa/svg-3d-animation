@@ -1,0 +1,60 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* fallback if svg background didn't work */
+    background-color: #282A2C;
+    background-image: url('../img/background.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#about {
+    width: 500px;
+    color: #fff;
+}
+
+#about h1 {
+    font-size: 3em;
+}
+
+#about p {
+    color: #78797C;
+    font-size: 1.3em;
+    line-height: 1.4em;
+}
+
+#svg-logo3d {
+    width: 300px;
+}
+
+#svg-logo3d .logo { 
+    opacity: 0;
+}
+#svg-logo3d:hover .logo {
+    animation-name: animateLogo;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease;
+    /* mix-blend-mode: overlay; */
+}
+
+@keyframes animateLogo {
+    from {
+        transform: translateX(0) translateY(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(60px) translateY(-5px);
+        opacity: 1;
+    }
+}
